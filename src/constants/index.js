@@ -2,23 +2,23 @@ import {
     mobile,
     backend,
     web,
-    javascript,
-    html,
-    css,
-    reactjs,
-    redux,
-    tailwind,
-    git,
-    threejs,
-    laravel,
-    ollama,
-    mongodb,
-    codeig,
-    sql,
-    node,
-    next,
-    python,
-    ionic,
+    // javascript,
+    // html,
+    // css,
+    // reactjs,
+    // redux,
+    // tailwind,
+    // git,
+    // threejs,
+    // laravel,
+    // ollama,
+    // mongodb,
+    // codeig,
+    // sql,
+    // node,
+    // next,
+    // python,
+    // ionic,
     
   } from "../assets";
   import da from '../assets/DA.png'
@@ -63,63 +63,47 @@ import {
   
     {
       name: "Tailwind CSS",
-      icon: tailwind,
-    },
-  
-    {
-      name: "git",
-      icon: git,
-    },
-
-    {
-      name: "laravel",
-      icon: laravel,
+      icon: "/assets/tailwind.png",
     },
     {
-      name: "ollama",
-      icon: ollama,
+      name: "Git",
+      icon: "/assets/git.png",
     },
     {
-      name: "codeig",
-      icon: codeig,
+      name: "Laravel",
+      icon: "/assets/laravel.png",
     },
     {
-      name: "sql",
-      icon: sql,
+      name: "React.js",
+      icon: "/assets/reactjs.png",
     },
     {
-      name: "node",
-      icon: node,
+      name: "Node.js",
+      icon: "/assets/node.png",
     },
     {
-      name: "next",
-      icon: next,
+      name: "MongoDB",
+      icon: "/assets/mongodb.png",
     },
     {
-      name: "python",
-      icon: python,
+      name: "CodeIgniter",
+      icon: "/assets/codeig.png",
     },
     {
-      name: "ionic",
-      icon: ionic,
+      name: "MySQL",
+      icon: "/assets/sql.png",
     },
     {
-      name: "html",
-      icon: html,
+      name: "Next.js",
+      icon: "/assets/next.png",
     },
     {
-      name: "css",
-      icon: css,
+      name: "Python",
+      icon: "/assets/python.png",
     },
-    
     {
-      name: "js",
-      icon: javascript,
-    },
-    
-    {
-      name: "React JS",
-      icon: reactjs,
+      name: "Ionic",
+      icon: "/assets/ionic.png",
     },
   ];
   
