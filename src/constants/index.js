@@ -27,6 +27,18 @@ import {
   import iqra from '../assets/iqra.png'
   import revouse from '../assets/revouse.png'
   import univ from '../assets/univ.png'
+  import tailwind from "../assets/tailwind.png";
+  import git from "../assets/git.png";
+  import laravel from "../assets/laravel.png";
+  import reactjs from "../assets/reactjs.png";
+  import node from "../assets/node.png";
+  import mongodb from "../assets/mongodb.png";
+  import codeig from "../assets/codeig.png";
+  import sql from "../assets/sql.png";
+  import next from "../assets/next.png";
+  import python from "../assets/python.png";
+  import ionic from "../assets/ionic.png";
+
   export const navLinks = [
     {
       id: "about",
@@ -58,54 +70,52 @@ import {
   ];
   
   const technologies = [
-
-    
-  
     {
       name: "Tailwind CSS",
-      icon: "../assets/tailwind.png",
+      icon: tailwind,
     },
     {
       name: "Git",
-      icon: "../assets/git.png",
+      icon: git,
     },
     {
       name: "Laravel",
-      icon: "../assets/laravel.png",
+      icon: laravel,
     },
     {
       name: "React.js",
-      icon: "../assets/reactjs.png",
+      icon: reactjs,
     },
     {
       name: "Node.js",
-      icon: "../assets/node.png",
+      icon: node,
     },
     {
       name: "MongoDB",
-      icon: "../assets/mongodb.png",
+      icon: mongodb,
     },
     {
       name: "CodeIgniter",
-      icon: "../assets/codeig.png",
+      icon: codeig,
     },
     {
       name: "MySQL",
-      icon: "../assets/sql.png",
+      icon: sql,
     },
     {
       name: "Next.js",
-      icon: "../assets/next.png",
+      icon: next,
     },
     {
       name: "Python",
-      icon: "../assets/python.png",
+      icon: python,
     },
     {
       name: "Ionic",
-      icon: "../assets/ionic.png",
+      icon: ionic,
     },
   ];
+  
   
   
   const projects = [
