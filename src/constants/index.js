@@ -36,7 +36,7 @@ import {
   import codeig from "../assets/tech/codeig.png";
   import sql from "../assets/tech/sql.png";
   import next from "../assets/tech/next.png";
-  import python from "../assets/tech/python.jng";
+  import python from "../assets/tech/python.jpg";
   import ionic from "../assets/tech/ionic.jng";
 
   export const navLinks = [
