@@ -86,10 +86,7 @@ import {
       name: "Node.js",
       icon: node,
     },
-    {
-      name: "MongoDB",
-      icon: mongodb,
-    },
+    
     {
       name: "CodeIgniter",
       icon: codeig,
