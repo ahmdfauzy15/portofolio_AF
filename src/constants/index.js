@@ -2,23 +2,8 @@ import {
     mobile,
     backend,
     web,
-    // javascript,
-    // html,
-    // css,
-    // reactjs,
-    // redux,
-    // tailwind,
-    // git,
-    // threejs,
-    // laravel,
-    // ollama,
-    // mongodb,
-    // codeig,
-    // sql,
-    // node,
-    // next,
-    // python,
-    // ionic,
+    
+    
     
   } from "../assets";
   import da from '../assets/DA.png'
@@ -70,14 +55,7 @@ import {
   ];
   
   const technologies = [
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
-    {
-      name: "Laravel",
-      icon: laravel,
-    },
+    
     {
       name: "React.js",
       icon: reactjs,
@@ -104,9 +82,17 @@ import {
       icon: python,
     },
     {
+      name: "Tailwind CSS",
+      icon: tailwind,
+    },
+    {
+      name: "Laravel",
+      icon: laravel,
+    },
+    {
       name: "Ionic",
       icon: ionic,
-    },
+    }
   ];
   
   
