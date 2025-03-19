@@ -27,17 +27,17 @@ import {
   import iqra from '../assets/iqra.png'
   import revouse from '../assets/revouse.png'
   import univ from '../assets/univ.png'
-  // import tailwind from "../assets/tailwind.png";
-  import git from "../assets/git.png";
-  import laravel from "../assets/laravel.png";
-  import reactjs from "../assets/reactjs.png";
-  import node from "../assets/node.png";
-  import mongodb from "../assets/mongodb.png";
-  import codeig from "../assets/codeig.png";
-  import sql from "../assets/sql.png";
-  import next from "../assets/next.png";
-  import python from "../assets/python.png";
-  import ionic from "../assets/ionic.png";
+  import tailwind from "../assets/tech/tailwind.png";
+  import git from "../assets/tech/git.png";
+  import laravel from "../assets/tech/laravel.png";
+  import reactjs from "../assets/tech/reactjs.png";
+  import node from "../assets/tech/node.png";
+  import mongodb from "../assets/tech/mongodb.png";
+  import codeig from "../assets/tech/codeig.png";
+  import sql from "../assets/tech/sql.png";
+  import next from "../assets/tech/next.png";
+  import python from "../assets/tech/python.jng";
+  import ionic from "../assets/tech/ionic.jng";
 
   export const navLinks = [
     {
@@ -70,10 +70,10 @@ import {
   ];
   
   const technologies = [
-    // {
-    //   name: "Tailwind CSS",
-    //   icon: tailwind,
-    // },
+    {
+      name: "Tailwind CSS",
+      icon: tailwind,
+    },
     {
       name: "Git",
       icon: git,
