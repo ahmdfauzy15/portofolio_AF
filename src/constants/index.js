@@ -75,10 +75,6 @@ import {
       icon: tailwind,
     },
     {
-      name: "Git",
-      icon: git,
-    },
-    {
       name: "Laravel",
       icon: laravel,
     },
