@@ -63,47 +63,47 @@ import {
   
     {
       name: "Tailwind CSS",
-      icon: "/assets/tailwind.png",
+      icon: "../assets/tailwind.png",
     },
     {
       name: "Git",
-      icon: "/assets/git.png",
+      icon: "../assets/git.png",
     },
     {
       name: "Laravel",
-      icon: "/assets/laravel.png",
+      icon: "../assets/laravel.png",
     },
     {
       name: "React.js",
-      icon: "/assets/reactjs.png",
+      icon: "../assets/reactjs.png",
     },
     {
       name: "Node.js",
-      icon: "/assets/node.png",
+      icon: "../assets/node.png",
     },
     {
       name: "MongoDB",
-      icon: "/assets/mongodb.png",
+      icon: "../assets/mongodb.png",
     },
     {
       name: "CodeIgniter",
-      icon: "/assets/codeig.png",
+      icon: "../assets/codeig.png",
     },
     {
       name: "MySQL",
-      icon: "/assets/sql.png",
+      icon: "../assets/sql.png",
     },
     {
       name: "Next.js",
-      icon: "/assets/next.png",
+      icon: "../assets/next.png",
     },
     {
       name: "Python",
-      icon: "/assets/python.png",
+      icon: "../assets/python.png",
     },
     {
       name: "Ionic",
-      icon: "/assets/ionic.png",
+      icon: "../assets/ionic.png",
     },
   ];
   
