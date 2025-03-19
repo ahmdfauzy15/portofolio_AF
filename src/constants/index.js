@@ -27,7 +27,7 @@ import {
   import iqra from '../assets/iqra.png'
   import revouse from '../assets/revouse.png'
   import univ from '../assets/univ.png'
-  import tailwind from "../assets/tailwind.png";
+  // import tailwind from "../assets/tailwind.png";
   import git from "../assets/git.png";
   import laravel from "../assets/laravel.png";
   import reactjs from "../assets/reactjs.png";
@@ -70,10 +70,10 @@ import {
   ];
   
   const technologies = [
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
+    // {
+    //   name: "Tailwind CSS",
+    //   icon: tailwind,
+    // },
     {
       name: "Git",
       icon: git,
