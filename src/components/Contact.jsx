@@ -15,6 +15,11 @@ const Contact = () => {
     message: '',
   });
 
+  // Ambil environment variables
+  const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID || import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -23,19 +28,21 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validasi input sebelum submit
     if (!form.name || !form.email || !form.message) {
       alert('Please fill in all fields.');
       return;
     }
 
     setLoading(true);
-    console.log("Submitting form with data:", form); // Debugging
+
+    console.log("Service ID:", serviceID);
+    console.log("Template ID:", templateID);
+    console.log("Public Key:", publicKey);
 
     emailjs
       .send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID, // Ganti dengan variable environment
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Ganti dengan variable environment
+        serviceID,
+        templateID,
         {
           from_name: form.name,
           to_name: 'Achmad Fauzy',
@@ -43,21 +50,17 @@ const Contact = () => {
           to_email: 'ahfauzy15@gmail.com',
           message: form.message,
         },
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY // Ganti dengan variable environment
+        publicKey
       )
       .then(() => {
         setLoading(false);
-        alert('Thank you. I will get back to you as soon as possible');
-        setForm({
-          name: '',
-          email: '',
-          message: '',
-        });
+        alert('Thank you. I will get back to you as soon as possible.');
+        setForm({ name: '', email: '', message: '' });
       })
       .catch((error) => {
         setLoading(false);
         alert('Something went wrong. Please try again.');
-        console.error("EmailJS Error:", error); // Debugging
+        console.error("EmailJS Error:", error);
       });
   };
 
