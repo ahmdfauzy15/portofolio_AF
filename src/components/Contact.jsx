@@ -1,10 +1,12 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { styles } from '../style';
 import { EarthCanvas } from './canvas';
 import SectionWrapper from '../hoc/SectionWrapper';
 import { slideIn } from '../utils/motion';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const formRef = useRef();
@@ -16,9 +18,19 @@ const Contact = () => {
   });
 
   // Mengambil environment variables
-  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  const [emailConfig, setEmailConfig] = useState({
+    serviceID: '',
+    templateID: '',
+    publicKey: '',
+  });
+
+  useEffect(() => {
+    setEmailConfig({
+      serviceID: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      templateID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+    });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,7 +41,7 @@ const Contact = () => {
     e.preventDefault();
 
     if (!form.name || !form.email || !form.message) {
-      alert('Please fill in all fields.');
+      toast.error('Please fill in all fields.');
       return;
     }
 
@@ -37,37 +49,39 @@ const Contact = () => {
 
     emailjs
       .send(
-        serviceID,
-        templateID,
+        emailConfig.serviceID,
+        emailConfig.templateID,
         {
           from_name: form.name,
-          to_name: 'Achmad Fauzy',
           from_email: form.email,
-          to_email: 'ahfauzy15@gmail.com',
+          to_email: form.email, // Email dikirim ke pengguna
           message: form.message,
         },
-        publicKey
+        emailConfig.publicKey
       )
       .then(() => {
         setLoading(false);
-        alert('Thank you. I will get back to you as soon as possible.');
+        toast.success('✅ Your message has been sent successfully!');
         setForm({ name: '', email: '', message: '' });
       })
       .catch((error) => {
         setLoading(false);
-        alert('Something went wrong. Please try again.');
+        toast.error('❌ Something went wrong. Please try again.');
         console.error('EmailJS Error:', error);
       });
   };
 
   return (
     <div id='contact' className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
+      <ToastContainer position='top-right' autoClose={3000} />
+      
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>Get in Touch</p>
         <h3 className={styles.sectionHeadText}>Contact</h3>
+
         <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
           <label className='flex flex-col'>
             <span className='text-white font-medium'>Your Name</span>
@@ -80,6 +94,7 @@ const Contact = () => {
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
+
           <label className='flex flex-col'>
             <span className='text-white font-medium'>Your Email</span>
             <input
@@ -91,6 +106,7 @@ const Contact = () => {
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
+
           <label className='flex flex-col'>
             <span className='text-white font-medium'>Your Message</span>
             <textarea
@@ -102,6 +118,7 @@ const Contact = () => {
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
+
           <button
             type='submit'
             className='bg-tertiary w-fit py-2 px-8 outline-none text-white font-bold shadow-md shadow-primary rounded-xl'
@@ -110,6 +127,7 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
+
       <motion.div
         variants={slideIn('right', 'tween', 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
