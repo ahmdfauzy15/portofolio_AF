@@ -15,10 +15,10 @@ const Contact = () => {
     message: '',
   });
 
-  // Ambil environment variables
-  const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID || import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  // Mengambil environment variables
+  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,10 +34,6 @@ const Contact = () => {
     }
 
     setLoading(true);
-
-    console.log("Service ID:", serviceID);
-    console.log("Template ID:", templateID);
-    console.log("Public Key:", publicKey);
 
     emailjs
       .send(
@@ -60,7 +56,7 @@ const Contact = () => {
       .catch((error) => {
         setLoading(false);
         alert('Something went wrong. Please try again.');
-        console.error("EmailJS Error:", error);
+        console.error('EmailJS Error:', error);
       });
   };
 
