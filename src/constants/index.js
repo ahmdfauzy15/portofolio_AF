@@ -77,10 +77,7 @@ import {
       name: "Next.js",
       icon: next,
     },
-    {
-      name: "Python",
-      icon: python,
-    },
+    
     {
       name: "Tailwind CSS",
       icon: tailwind,
