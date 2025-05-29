@@ -5,7 +5,7 @@ import { fadeIn, textVariant } from '../utils/motion';
 import SectionWrapper from '../hoc/SectionWrapper';
 import Tech from './Tech';
 import profilePic from '../assets/af.jpg'; // Pastikan gambar ada di folder assets
-import cvPDF from '../assets/cv.pdf'; // Import CV PDF
+import cvPDF from '../assets/AchmadFauzy_CV.pdf'; // Import CV PDF
 
 const About = () => {
   return (
