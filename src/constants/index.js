@@ -216,7 +216,7 @@ import {
         },
       ],
       image: halosani,
-      demo:'https://drive.google.com/drive/folders/1gReUhneLMbOu3VnEXP20PLCNWsKUdrjD?usp=sharing'
+      demo:'https://drive.google.com/drive/folders/1t4e0E1deQB1rsmiDkPQEsqrnGa2MMpv3?usp=sharing'
     }
     
   ];
