@@ -27,7 +27,7 @@ const Hero = () => {
       </div>
 
 
-      <motion.div
+      {/* <motion.div
       
         className="absolute inset-x-0 bottom-20 flex justify-center w-full" // Naikkan posisi gambar
         initial={{ y: 20, opacity: 0.8 }}
@@ -39,7 +39,7 @@ const Hero = () => {
           alt="Computer" 
           className="w-[400px] md:w-[500px] lg:w-[500px] object-contain drop-shadow-2xl rounded-xl"
         />
-      </motion.div>
+      </motion.div> */}
 
       <div className='absolute xs:-bottom-10 z-10 -bottom-10 w-full flex justify-center items-center'>
         <a href="#about">
